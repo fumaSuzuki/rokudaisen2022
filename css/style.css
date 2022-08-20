@@ -1,0 +1,476 @@
+@charset "UTF-8";
+
+/* 共通項目をここに書いていく。 */
+
+html {
+    font-size: 62.5%;
+    font-family: 'Noto Serif JP', serif;
+    background-color: #DFF6FF;
+}
+
+body {
+    font-size: 16px;
+    font-size: 1.6rem; /*  */
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a:hover{
+    color: #47B5FF;
+}
+
+a{
+    color: black;
+}
+
+a:active{
+    color: #47B5FF;
+}
+
+header {
+    background-color: #47B5FF;
+    padding: 1rem;
+}
+
+
+.smalltitle {
+    text-align: center;
+    font-size: 2.0rem;
+    margin: 0rem;
+
+}
+
+.title {
+    text-align: center;
+    font-size: 2.4rem;
+    margin: 0rem;
+}
+
+.menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: #47B5FF;
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 30px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+}
+.menu-btn span:before {
+    bottom: 8px;
+}
+.menu-btn span:after {
+    top: 8px;
+}
+
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+#menu-btn-check {
+    display: none;
+}
+
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;/*leftの値を変更してメニューを画面外へ*/
+    z-index: 80;
+    background-color: #3584bb;
+    transition: all 0.5s;/*アニメーション設定*/
+}
+.menu-content ul {
+    padding: 70px 10px 0;
+}
+.menu-content ul li {
+    border-bottom: solid 1px #ffffff;
+    list-style: none;
+}
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color:#ffffff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+}
+.menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+}
+
+#menu-btn-check:checked ~ .menu-content {
+    left: 0;/*メニューを画面内へ*/
+}
+
+.container1{
+    height: 20rem;
+    overflow: hidden; /* containerからはみ出た画像を隠す */
+    position: relative; /* 相対配置 */
+    margin:0;
+}
+
+.top_images{
+    opacity: 0; /* 要素の透明度を0(完全に透明)にする */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* containerに合わせて縦横比を維持しながらリサイズし、全体が見えるようにはめ込む。 */
+    position: absolute; /* 絶対配置 */
+    left: 0;
+    top: 0;
+     /* -webkit-animationとは、cssでアニメーションを使うためのプロパティー */
+    animation-name: slide; /* アニメーションの名前をslideにする */
+    animation-duration: 15s; /* アニメーションの長さを15秒に設定 */
+    animation-timing-function: ease; /* 開始と完了を滑らかにする */
+    animation-delay: 0; /* アニメーションの開始までの時間を0にする(すぐ始まる) */
+    animation-iteration-count: infinite; /* スライドショーを無限に再生を繰り返す */
+    animation-direction: normal; /* 普通方向のサイクルでスライドショーを繰り返す */
+}
+
+.top_images:nth-of-type(2) {
+    /* .top_imagesクラスの2つ目の要素に指示をだす */
+    animation-delay: 5s;
+}
+
+.top_images:nth-of-type(3) {
+    /* .top_imagesクラスの3つ目の要素に指示をだす */
+    animation-delay: 10s;
+}
+
+@keyframes slide {
+
+    /* アニメーションの開始から終了までどのようなアニメーションをするのか指定する */
+    0% {
+        opacity: 0;
+        /* 開始時は完全に透明 */
+    }
+
+    30% {
+        /* 30%の時透明じゃなくなる */
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+        z-index: 9;
+        /* 前面に出す */
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.frame{
+    background-color: #fff;
+    margin: 1rem 1rem 3rem 1rem;
+    padding: 0.6rem;
+}
+
+.contents{
+    text-align: center;
+    padding: 1rem;
+}
+
+.container2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.universities{
+    color: black;
+    flex-basis: 10rem;
+}
+
+.logo{
+    width: 11rem;
+}
+
+#about{
+    margin: 2rem;
+    line-height: 1.7;
+}
+
+.information{
+    font-family:sans-serif;
+}
+
+.program{
+    width: 100%;
+    border-right: #ddd solid 1px;
+    border-left: #ddd solid 1px;
+    border-collapse: collapse;
+    line-height: 2;
+    letter-spacing: 0.5px;
+    text-align: left;
+    font-family: sans-serif ;
+    margin: 0.1rem;
+}
+
+.program th{
+    background-color: #47B5FF;
+    padding: 0.5rem;
+    color: #fff;
+    font-weight: 200 ;
+}
+
+.program td{
+    padding: 0.5rem;
+}
+
+.accessArea dl{
+    border-top: #ddd 1px solid;
+}
+
+.accessArea dt{
+    color: rgb(4, 76, 131);
+}
+
+#map{
+    text-align: center;
+}
+
+footer{
+    background-color: #1363DF;
+}
+
+.footer_navi {
+    text-align: center;
+    margin: 0;
+}
+
+.footer_navi_list {
+    padding:2.4rem;
+    margin: 2rem 0rem 0rem 0rem;
+}
+
+.footer_navi_list li {
+    color: lightgray;
+    display: inline-block;
+    /* リストを横並びにする */
+    margin: 1rem;
+    border-bottom: gray 1px solid;
+    font-size: 1.5rem;
+}
+
+.footer_link{
+    text-decoration: none;
+    color: lightgray;
+}
+
+footer p{
+    text-align: center;
+    color: darkgrey;
+    font-size: 1.3rem;
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+/* ---------------------universities.htmlの内容----------------------------*/
+.uni_name{
+    display:flex;
+}
+
+.uni_pics{
+   width: 6.4rem;
+}
+
+.uni_images{
+    opacity: 0; /* 要素の透明度を0(完全に透明)にする */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* containerに合わせて縦横比を維持しながらリサイズし、全体が見えるようにはめ込む。 */
+    position: absolute; /* 絶対配置 */
+    left: 0;
+    top: 0;
+     /* -webkit-animationとは、cssでアニメーションを使うためのプロパティー */
+    animation-name: slide2; /* アニメーションの名前をslideにする */
+    animation-duration: 15s; /* アニメーションの長さを15秒に設定 */
+    animation-timing-function:ease; /* 開始と完了を滑らかにする */
+    animation-delay: 0; /* アニメーションの開始までの時間を0にする(すぐ始まる) */
+    animation-iteration-count: infinite; /* スライドショーを無限に再生を繰り返す */
+    animation-direction: normal; /* 普通方向のサイクルでスライドショーを繰り返す */
+}
+
+.uni_images:nth-of-type(2) {
+    /* .top_imagesクラスの2つ目の要素に指示をだす */
+    animation-delay: 5s;
+}
+
+.uni_images:nth-of-type(3) {
+    /* .top_imagesクラスの3つ目の要素に指示をだす */
+    animation-delay: 10s;
+}
+
+
+
+
+@keyframes slide2 {
+
+    /* アニメーションの開始から終了までどのようなアニメーションをするのか指定する */
+    0% {
+        opacity: 0;
+        /* 開始時は完全に透明 */
+    }
+
+    30% {
+        /* 30%の時透明じゃなくなる */
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+        z-index: 9;
+        /* 前面に出す */
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.justformeiji{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* containerに合わせて縦横比を維持しながらリサイズし、全体が見えるようにはめ込む。 */
+    position: absolute; /* 絶対配置 */
+    left: 0;
+    top: 0;
+}
+
+.introduction{
+    margin: 2rem;
+    line-height: 1.7;
+}
+
+/* --------------------------------------------------galleryの内容------------------------------------------------- */
+
+.btn {
+    display: inline-block;
+    background-color: firebrick;
+    padding: 6px 12px;
+    color: #fff;
+    border-radius: 18px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .btn:hover {
+    filter: brightness(1.1);
+  }
+  
+  .hes-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+    columns: 4;
+  }
+  
+  .hes-gallery img {
+    width: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  .hes-gallery img:hover {
+    transform: scale(1.04);
+    box-shadow: 2px 2px 6px #555;
+  }
+
+
+/* タブレット */
+@media screen and (min-width: 420px) {
+    .container1{
+        height: 30rem;
+        overflow: hidden; /* containerからはみ出た画像を隠す */
+        position: relative; /* 相対配置 */
+        margin:0;
+    }
+
+    .top_images{
+        object-fit: scale-down;
+    }
+
+    .uni_images{
+        object-fit: scale-down;
+    }
+
+    .justformeiji{
+        object-fit: scale-down;
+    }
+}
+
+/* PC */
+
+@media screen and (min-width: 920px) {
+    body{
+        margin-right: 25%;
+        margin-left: 25%;
+    }
+    .smalltitle {
+        text-align: center;
+        font-size: 2.8rem;
+        margin: 1rem 0rem 0rem 0rem;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 3.5rem;
+        margin: 0;
+    }
+
+    .container1{
+        height: 50rem;
+        overflow: hidden; /* containerからはみ出た画像を隠す */
+        position: relative; /* 相対配置 */
+        margin:0;
+    }
+
+    .top_images{
+        object-fit: scale-down;
+    }
+
+    .uni_images{
+        object-fit: scale-down;
+    }
+
+    .justformeiji{
+        object-fit: scale-down;
+    }
+}
