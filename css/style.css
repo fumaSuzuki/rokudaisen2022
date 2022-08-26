@@ -225,7 +225,7 @@ header {
     line-height: 1.7;
 }
 
-a[target=_blank] {
+.pamph  {
 	padding-right: 30px;
 	background: url(../images/pdf_icon.png) right center/40px auto no-repeat;
 }
