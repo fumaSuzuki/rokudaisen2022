@@ -33,7 +33,6 @@ a:active{
 
 header {
     background-color: #47B5FF;
-    padding: 1rem;
 }
 
 
@@ -44,10 +43,26 @@ header {
 
 }
 
+.logo_title{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+
+.glider_logo{
+    width: 8rem;
+    margin: 0.1rem;
+}
+
 .title {
     text-align: center;
     font-size: 2.4rem;
-    margin: 0rem;
+    margin: 0.1rem;
+}
+
+#title {
+    text-decoration: none;
+    color: black;
 }
 
 .menu-btn {
@@ -297,9 +312,9 @@ footer h3{
     color: lightgray;
     display: inline-block;
     /* リストを横並びにする */
-    margin: 0.6rem;
+    margin: 0.5rem;
     border-bottom: gray 1px solid;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 
 .footer_link{
@@ -310,7 +325,7 @@ footer h3{
 footer p{
     text-align: center;
     color: darkgrey;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin: 0;
     padding-bottom: 1rem;
 }
@@ -394,43 +409,45 @@ footer p{
 
 /* --------------------------------------------------galleryの内容------------------------------------------------- */
 
-.btn {
-    display: inline-block;
-    background-color: firebrick;
-    padding: 6px 12px;
-    color: #fff;
-    border-radius: 18px;
-    text-decoration: none;
-    transition: 0.3s;
-  }
-  
-  .btn:hover {
-    filter: brightness(1.1);
-  }
-  
-  .hes-gallery {
+.click{
+    font-family: sans-serif;
+    color:#3584bb;
+}
+
+.grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
-    padding: 10px;
-    columns: 4;
-  }
-  
-  .hes-gallery img {
-    width: 100%;
-    object-fit: cover;
-    transition: 0.3s;
-    cursor: pointer;
-  }
-  
-  .hes-gallery img:hover {
-    transform: scale(1.04);
-    box-shadow: 2px 2px 6px #555;
-  }
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    margin-top: 0.3rem;
+    margin-bottom: 3rem;
+}
+
+.copyright{
+    text-align: right;
+    margin: 1rem;
+    font-family:'Times New Roman', Times, serif;
+    font-size:large;
+}
 
 
 /* タブレット */
 @media screen and (min-width: 420px) {
+
+    .title {
+        text-align: center;
+        font-size: 3.0rem;
+        margin: 0;
+    }
+
+    #title {
+        text-decoration: none;
+    }
+
+    .glider_logo{
+        width: 10rem;
+        margin: 0.1rem;
+    }
+
     .container1{
         height: 30rem;
         overflow: hidden; /* containerからはみ出た画像を隠す */
@@ -448,6 +465,10 @@ footer p{
 
     .justformeiji{
         object-fit: scale-down;
+    }
+
+    .grid{
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     }
 }
 
@@ -468,6 +489,10 @@ footer p{
         text-align: center;
         font-size: 3.5rem;
         margin: 0;
+    }
+
+    #title {
+        text-decoration: none;
     }
 
     .container1{
