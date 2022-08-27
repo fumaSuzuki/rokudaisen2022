@@ -15,6 +15,10 @@ body {
     box-sizing: border-box;
 }
 
+img{
+    width: 100%;
+}
+
 a:hover{
     color: #47B5FF;
 }
@@ -273,6 +277,12 @@ footer{
     background-color: #1363DF;
 }
 
+footer h3{
+    color: lightgrey;
+    text-align: center;
+    padding: 2rem;
+}
+
 .footer_navi {
     text-align: center;
     margin: 0;
@@ -287,9 +297,9 @@ footer{
     color: lightgray;
     display: inline-block;
     /* リストを横並びにする */
-    margin: 1rem;
+    margin: 0.6rem;
     border-bottom: gray 1px solid;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 .footer_link{
