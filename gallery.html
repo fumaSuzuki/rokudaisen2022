@@ -11,14 +11,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"
+        type="text/javascript"></script>
 </head>
 
 <body>
     <header>
         <h3 class="smalltitle">第25回</h3>
-        <h2 class="title">
-            <nobr>東京六大学対抗<br>グライダー競技会</nobr>
-        </h2>
+        <div class="logo_title">
+            <img src="images/glider_logo.png" class="glider_logo">
+            <h2 class="title">
+                <a href="index.html" id="title">
+                    <nobr>東京六大学対抗<br>グライダー競技会</nobr>
+                </a>
+            </h2>
+        </div>
         <div class="hamburger-menu">
             <input type="checkbox" id="menu-btn-check">
             <label for="menu-btn-check" class="menu-btn"><span></span></label>
@@ -43,37 +52,46 @@
         </div>
     </header>
     <main>
-        <h2>ギャラリー</h2>
-        <p>(近日公開予定)</p>
-        <br><br><br><br><br><br><br><br>
-        <!--  
-        <div class="hes-gallery">
-            <img
-              src="images/glider.jpg"
-              alt="image1"
-              data-fullsize="img/dogo-uno.jpg"
-              data-subtext="piesiak"
-            />
-            <img src="images/sky.jpg" alt="image2" data-subtext="Podpis zdjęcia kolejnego" />
-            <img src="images/sky2.jpg" alt="image3" data-subtext="Kolejny podpis zdjęcia" />
-            <img src="images/waseda1.png" alt="image4" data-subtext="Podpis czwartego już zdjęcia" />
-          </div>
-        -->
-        
+        <div class="frame">
+            <h2 class="contents">ギャラリー</h2>
+            <div class="click">タップすると拡大します</div>
+
+            <div class="grid">
+                <a href="images/rokudai_pics/rokudai_pic1.jpg" data-lightbox="group"><img
+                        src="images/light_rokudai_pics/light_rokudai_pic1.jpg" alt="1"></a>
+
+                <a href="images/rokudai_pics/rokudai_pic2.jpg" data-lightbox="group"><img
+                        src="images/light_rokudai_pics/light_rokudai_pic2.jpg" alt="2"></a>
+
+                <a href="images/rokudai_pics/rokudai_pic3.jpg" data-lightbox="group"><img
+                        src="images/light_rokudai_pics/light_rokudai_pic3.jpg" alt="3"></a>
+
+                <a href="images/rokudai_pics/rokudai_pic4.jpg" data-lightbox="group"><img
+                        src="images/light_rokudai_pics/light_rokudai_pic4.jpg" alt="4"></a>
+
+                <a href="images/rokudai_pics/rokudai_pic5.jpg" data-lightbox="group"><img
+                        src="images/light_rokudai_pics/light_rokudai_pic5.jpg" alt="5"></a>
+
+                <a href="images/rokudai_pics/rokudai_pic6.jpg" data-lightbox="group"><img
+                        src="images/light_rokudai_pics/light_rokudai_pic6.jpg" alt="6"></a>
+
+                <a href="images/rokudai_pics/rokudai_pic7.jpg" data-lightbox="group"><img
+                        src="images/light_rokudai_pics/light_rokudai_pic7.jpg" alt="7"></a>
+
+                <a href="images/rokudai_pics/rokudai_pic8.jpg" data-lightbox="group"><img
+                        src="images/light_rokudai_pics/light_rokudai_pic8.jpg" alt="8"></a>
+
+                <a href="images/rokudai_pics/rokudai_pic9.jpg" data-lightbox="group"><img
+                        src="images/light_rokudai_pics/light_rokudai_pic9.jpg" alt="9"></a>
+
+                <a href="images/rokudai_pics/rokudai_pic10.jpg" data-lightbox="group"><img
+                        src="images/light_rokudai_pics/light_rokudai_pic10.jpg" alt="10"></a>
+            </div>
+
+            <div class="copyright"><a href="https://twitter.com/flyingnikon">©︎Akira Uekawa</a></div>
+        </div>
+
     </main>
-
-    <script src="src/hes-gallery.js"></script>
-    <!-- <script src="../dist/hes-gallery.js"></script> -->
-    <script>
-      HesGallery.setOptions({
-        disableScrolling: false,
-        hostedStyles: false,
-        animations: true,
-
-        showImageCount: true,
-        wrapAround: true,
-      })
-    </script>
 
     <footer>
         <nav class="footer_navi">
