@@ -40,24 +40,36 @@ header {
     text-align: center;
     font-size: 2.0rem;
     margin: 0rem;
-
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }
 
 .logo_title{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 20% 80%;
 }
 
 .glider_logo{
-    width: 8rem;
-    margin: 0.1rem;
+    margin: auto;
+    max-width: 115px;
+    object-fit: cover;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
 }
 
 .title {
     text-align: center;
-    font-size: 2.4rem;
-    margin: 0.1rem;
+    font-size: 2.2rem;
+    margin: 1rem 0rem 0rem 0rem;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
 
 #title {
@@ -292,11 +304,7 @@ footer{
     background-color: #1363DF;
 }
 
-footer h3{
-    color: lightgrey;
-    text-align: center;
-    padding: 2rem;
-}
+
 
 .footer_navi {
     text-align: center;
@@ -304,7 +312,7 @@ footer h3{
 }
 
 .footer_navi_list {
-    padding:2.4rem;
+    padding:2rem 1rem 1rem 2rem;
     margin: 2rem 0rem 0rem 0rem;
 }
 
@@ -312,7 +320,7 @@ footer h3{
     color: lightgray;
     display: inline-block;
     /* リストを横並びにする */
-    margin: 0.5rem;
+    margin: 0.3rem;
     border-bottom: gray 1px solid;
     font-size: 1.3rem;
 }
@@ -443,10 +451,7 @@ footer p{
         text-decoration: none;
     }
 
-    .glider_logo{
-        width: 10rem;
-        margin: 0.1rem;
-    }
+    
 
     .container1{
         height: 30rem;
@@ -466,6 +471,7 @@ footer p{
     .justformeiji{
         object-fit: scale-down;
     }
+
     .grid{
         grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
     }
@@ -487,7 +493,7 @@ footer p{
     .title {
         text-align: center;
         font-size: 3.5rem;
-        margin: 0;
+        margin: 2rem 0rem 0rem 0rem;
     }
 
     #title {
@@ -519,4 +525,9 @@ footer p{
     .grid{
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     }
+
+    .glider_logo{
+        max-width: 150px;
+    }
 }
+
