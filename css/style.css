@@ -417,7 +417,7 @@ footer p{
 .grid{
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
     margin-top: 0.3rem;
     margin-bottom: 3rem;
 }
@@ -466,9 +466,8 @@ footer p{
     .justformeiji{
         object-fit: scale-down;
     }
-
     .grid{
-        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
     }
 }
 
@@ -512,5 +511,12 @@ footer p{
 
     .justformeiji{
         object-fit: scale-down;
+    }
+}
+
+/* large pc */
+@media screen and (min-width: 1600px) {
+    .grid{
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     }
 }
